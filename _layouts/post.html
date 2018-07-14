@@ -8,9 +8,9 @@
 <![endif]-->
   <input id="nm-switch" type="hidden" value="{{ site.nightMode }}"> {% include header.html %}
 
-  <header class="g-banner post-header {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }} {% unless page.cover %}post-no-cover{% endunless %}" data-theme="{{ site.theme-color }}">
+  <header class="g-banner post-header {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }} {% unless page.cover %}post-no-cover{% endunless %}" data-theme="{{ site.theme-color }}" style="height:350px;">
     <div class="post-wrapper">
-      <div class="post-tags">
+      <div class="post-tags" style="margin-top:62px;">
         {% if page.tags.size > 0 %}
           {% for tag in page.tags  %}
             <a href="{{ "tags#" | append: tag | absolute_url }}" class="post-tag">{{ tag }}</a>
