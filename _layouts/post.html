@@ -7,6 +7,21 @@
 pre{
 	font-size: 13px	!important;
 }
+
+*, ::after, ::before {
+    box-sizing: unset;
+}
+
+.affix-top{
+	margin-top:-30px;
+	margin-left: 10px;
+}
+
+.affix{
+	margin-top:40px;
+	margin-left: 10px;
+}
+
 </style>
   <!--[if lt IE 10]>
 <div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
@@ -37,20 +52,26 @@ pre{
     {% endif %}
   </header>
 
-  <div class="post-content visible">
-    {% if page.subtitle %}
-    <h2 class="post-subtitle">{{ page.subtitle }}</h2>
-    {% endif %}
+  <div class="bs-docs-container">
+	  <div class="row post-content visible">
+	    {% if page.subtitle %}
+	    <h2 class="post-subtitle">{{ page.subtitle }}</h2>
+	    {% endif %}
 
-    <article class="markdown-body">
-      {{ page.content }}
-    </article>
+	    <div class="col-md-2" role="complementary">
+		    <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" id="toc"></div> <!-- markdown title -->
+	    </div>
 
-    {% if site.social-share %}
-    <div class="social-share-wrapper">
-      <div class="social-share"></div>
-    </div>
-    {% endif %}
+	    <article class="col-md-8 markdown-body" role="main">
+	      {{ page.content }}
+	    </article>
+
+	    {% if site.social-share %}
+	    <div class="social-share-wrapper">
+	      <div class="social-share"></div>
+	    </div>
+	    {% endif %}
+	  </div>
   </div>
 
   <section class="author-detail">
@@ -110,6 +131,17 @@ pre{
 
   {% include footer.html %}
 
+  <script>
+    (function(){
+      // markdown title
+	    $('#toc').toc({listType: 'ul',
+		    classes: {
+			    list: 'clear nav',
+			    item: 'clear'
+		    }});
+	   //$('body').scrollspy({target: '#toc'})
+    })();
+  </script>
   <script src="/assets/js/social-share.min.js"></script>
   <script>
     socialShare('.social-share', {
@@ -144,7 +176,7 @@ pre{
 
       (d.head || d.body).appendChild(s);
     })();
-  </script>
+ </script>
   {% endif %}
 
   <script src="/assets/js/prism.js"></script>
