@@ -58,13 +58,13 @@ pre{
 	    <h2 class="post-subtitle">{{ page.subtitle }}</h2>
 	    {% endif %}
 
-	    <div class="col-md-2" role="complementary">
-		    <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" id="toc"></div> <!-- markdown title -->
-	    </div>
-
-	    <article class="col-md-8 markdown-body" role="main">
+	    <article class="col-md-8 markdown-body col-md-offset-2" role="main">
 	      {{ page.content }}
 	    </article>
+
+	    <div class="col-md-2" role="complementary" style="padding-left:0px;padding-right:0px;">
+		    <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" id="toc"></div> <!-- markdown title -->
+	    </div>
 
 	    {% if site.social-share %}
 	    <div class="social-share-wrapper">
@@ -135,7 +135,7 @@ pre{
     (function(){
       // markdown title
 	    $('#toc').toc({listType: 'ul',
-		    minimumHeaders: 1,
+		    headers: 'h1,h2',
 		    classes: {
 			    list: 'clear nav',
 			    item: 'clear'

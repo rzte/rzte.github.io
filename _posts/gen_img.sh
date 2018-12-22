@@ -25,7 +25,7 @@ done
 
 file="${filepath}${filename}"
 
-echo "filepath: $file"
+echo "filepath: `echo $file | cut -c 3-`"
 
 mv $1 $file
 
