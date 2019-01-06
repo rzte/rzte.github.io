@@ -2,7 +2,7 @@
 title: 'rzte'
 description: '记录成长过程的点点滴滴～'
 keyword: 'blog, rzte, geek, 安全, 渗透, 逆向, 开发, 博客'
-url: 'http://blog.rz6.tech' # your host
+url: 'https://blog.rz6.tech' # your host
 
 # if you don't need baseurl, you should leave this value blank.
 baseurl: ''
