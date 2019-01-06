@@ -9,7 +9,7 @@ tags: 安全 cryptography ctf web
 
 [BugkuCTF login4](https://ctf.bugku.com/challenges#login4)
 
-先来看一下CBC的加密方式：![](http://www.rz6.tech/images/Sat-Nov-17-23:26:35-2018_611064.jpg)
+先来看一下CBC的加密方式：![](https://www.rz6.tech/images/Sat-Nov-17-23:26:35-2018_611064.jpg)
 
 可以看到在加密前明文会与初始化向量IV（或是前一个密文分组）进行异或运算，这样在解密时就可以通过修改初始化向量（或是前一个密文分组）来影响到原有的明文信息，这就是CBC字节翻转攻击
 

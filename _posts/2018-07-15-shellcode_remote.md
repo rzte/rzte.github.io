@@ -5,7 +5,7 @@ subtitle: 'shellcode编写'
 tags: 安全 逆向 shellcode linux
 ---
 
-### retsh.c
+# retsh.c
 
 绑定端口的shellcode
 
@@ -55,7 +55,7 @@ whoami
 root
 ```
 
-### 编写汇编
+# 编写汇编
 
 用到的系统函数有：
 
@@ -180,7 +180,7 @@ mov al, 11
 int 0x80
 ```
 
-### 编译链接
+# 编译链接
 
 ```bash
 rz$ nasm -f elf shell.asm -o shell.o
@@ -203,7 +203,7 @@ whoami
 root
 ```
 
-### 提取shellcode
+# 提取shellcode
 
 ```bash
 for i in `objdump -d shell.o | grep "^[[:space:]]*[0-9a-f]\+:" | cut -f 2`; do
