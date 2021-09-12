@@ -134,8 +134,9 @@
       {% if site.comments.cusdis %}
       <!--  https://cusdis.com/  -->
       <div id="cusdis_thread" data-host="{{ site.comments.data_host }}" data-app-id="{{ site.comments.data_app_id }}"
-        data-page-id="{{ site.comments.data_page_id }}" data-page-url="{{ site.comments.data_page_url }}"
-        data-page-title="{{ site.comments.data_page_title }}"></div>
+        data-page-id="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" 
+        data-page-url="{{ page.url | prepend: site.url }}"
+        data-page-title="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}"></div>
       <script async defer src="{{ site.comments.cusdis_url }}"></script>
       {% endif %}
     </section>

@@ -33,9 +33,6 @@ comments:
   cusdis: true
   data_host: 'https://cusdis.com'
   data_app_id: '342c3cc8-b0f9-45de-8df4-fc4ae50915e8'
-  data_page_id: 'cincly'
-  data_page_url: 'https://blog.rz6.tech/'
-  data_page_title: 'cincly blog'
   cusdis_url: 'https://cusdis.com/js/cusdis.es.js'
 
 # MathJax 公式支持 by Ray-Eldath
