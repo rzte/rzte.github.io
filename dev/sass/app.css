@@ -846,8 +846,7 @@ a {
       color: #AEB4BD; }
     .night-mode .read-next-item .filter {
       background-color: rgba(0, 0, 0, 0.6); }
-  .night-mode :not(pre) > code[class*="language-"], .night-mode pre[class*="language-"] {
-    background-color: #2D313A; }
+  .night-mode :not(pre) > code[class*="language-"], .night-mode pre[class*="language-"] { }
   .night-mode code[class*="language-"], .night-mode pre[class*="language-"], .night-mode .token.punctuation,
   .night-mode .token.operator, .night-mode .token.entity, .night-mode .token.url, .night-mode .language-css .token.string,
   .night-mode .style .token.string, .night-mode .token.variable {

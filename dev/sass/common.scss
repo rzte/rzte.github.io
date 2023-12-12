@@ -859,9 +859,7 @@
             background-color: rgba(0, 0, 0, .6);
         }
     }
-    :not(pre) > code[class*="language-"], pre[class*="language-"] {
-        background-color: $color-dark-secondary;
-    }
+    :not(pre) > code[class*="language-"], pre[class*="language-"] {}
     code[class*="language-"], pre[class*="language-"], .token.punctuation,
     .token.operator, .token.entity, .token.url, .language-css .token.string,
     .style .token.string, .token.variable {
